@@ -4,7 +4,7 @@ Image zoom that makes sense.
 
 This plugin use [Zooming](https://github.com/kingdido999/zooming) library.
 
-![banner]()
+![banner](https://cdn.rawgit.com/web2easy/OctoberCMS-Zooming-Images-Plugin/e2a461d7/assets/images/banner.png)
 
 ### Quckstart guide
 
