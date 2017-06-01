@@ -1,0 +1,24 @@
+{% put scripts %}
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+    new Zooming({
+        defaultZoomable:          "{{ __SELF__.property('defaultZoomable') }}",
+        enableGrab:               {{ __SELF__.property('enableGrab') }},
+        preloadImage:             {{ __SELF__.property('preloadImage') }},
+        transitionDuration:       {{ __SELF__.property('transitionDuration') }},
+        transitionTimingFunction: "{{ __SELF__.property('transitionTimingFunction') }}",
+        bgColor:                  "{{ __SELF__.property('bgColor') }}",
+        bgOpacity:                {{ __SELF__.property('bgOpacity') }},
+        scaleBase:                {{ __SELF__.property('scaleBase') }},
+        scaleExtra:               {{ __SELF__.property('scaleExtra') }},
+        scrollThreshold:          {{ __SELF__.property('scrollThreshold') }},
+        zIndex:                   {{ __SELF__.property('zIndex') }},
+        customSize:               {{ __SELF__.property('customSize') }}
+    })
+
+});
+</script>
+
+{% endput %}
