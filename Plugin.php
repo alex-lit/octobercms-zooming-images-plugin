@@ -7,11 +7,11 @@ class Plugin extends PluginBase
     public function pluginDetails()
     {
         return [
-            'name'        => 'alexlit.zoomingimages::lang.plugin.name',
-            'description' => 'alexlit.zoomingimages::lang.plugin.description',
+            'name'        => 'Zooming Images',
+            'description' => 'Image zoom that makes sense',
             'author'      => 'Alexey Litovchenko',
             'icon'        => 'icon-expand',
-            'homepage'    => 'https://web2easy.ru'
+            'homepage'    => 'https://alexlit.gitlab.io'
         ];
     }
 
@@ -20,9 +20,5 @@ class Plugin extends PluginBase
         return [
            '\AlexLit\ZoomingImages\Components\ZoomingImages' => 'zoomingImages'
         ];
-    }
-
-    public function registerSettings()
-    {
     }
 }

@@ -1,6 +1,0 @@
-plugin:
-    name: 'alexlit.zoomingimages::lang.plugin.name'
-    description: 'alexlit.zoomingimages::lang.plugin.description'
-    author: 'Alexey Litovchenko'
-    icon: oc-icon-expand
-    homepage: 'https://web2easy.ru'

@@ -1,24 +1,54 @@
 {% put scripts %}
 
-<script>
-document.addEventListener('DOMContentLoaded', function () {
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var {{ __SELF__.id }} = new Zooming({
 
-    new Zooming({
-        defaultZoomable:          "{{ __SELF__.property('defaultZoomable') }}",
-        enableGrab:               {{ __SELF__.property('enableGrab') }},
-        preloadImage:             {{ __SELF__.property('preloadImage') }},
-        transitionDuration:       {{ __SELF__.property('transitionDuration') }},
+        // Options
+        bgColor: "{{ __SELF__.property('bgColor') }}",
+        bgOpacity: {{ __SELF__.property('bgOpacity') }},
+        closeOnWindowResize: {{ __SELF__.property('closeOnWindowResize') }},
+        customSize: {{ __SELF__.property('customSize') }},
+        defaultZoomable: "{{ __SELF__.property('defaultZoomable') }}",
+        enableGrab: {{ __SELF__.property('enableGrab') }},
+        preloadImage: {{ __SELF__.property('preloadImage') }},
+        scaleBase: {{ __SELF__.property('scaleBase') }},
+        scaleExtra: {{ __SELF__.property('scaleExtra') }},
+        scrollThreshold: {{ __SELF__.property('scrollThreshold') }},
+        transitionDuration: {{ __SELF__.property('transitionDuration') }},
         transitionTimingFunction: "{{ __SELF__.property('transitionTimingFunction') }}",
-        bgColor:                  "{{ __SELF__.property('bgColor') }}",
-        bgOpacity:                {{ __SELF__.property('bgOpacity') }},
-        scaleBase:                {{ __SELF__.property('scaleBase') }},
-        scaleExtra:               {{ __SELF__.property('scaleExtra') }},
-        scrollThreshold:          {{ __SELF__.property('scrollThreshold') }},
-        zIndex:                   {{ __SELF__.property('zIndex') }},
-        customSize:               {{ __SELF__.property('customSize') }}
-    })
+        zIndex: {{ __SELF__.property('zIndex') }},
 
-});
-</script>
+        // Event Hooks
+        onBeforeOpen: function(target) {
+          {{ __SELF__.property('onBeforeOpen') | raw }}
+        },
+        onOpen: function(target) {
+          {{ __SELF__.property('onOpen') | raw }}
+        },
+        onBeforeGrab: function(target) {
+          {{ __SELF__.property('onBeforeGrab') | raw }}
+        },
+        onGrab: function(target) {
+          {{ __SELF__.property('onGrab') | raw }}
+        },
+        onMove: function(target) {
+          {{ __SELF__.property('onMove') | raw }}
+        },
+        onBeforeRealse: function(target) {
+          {{ __SELF__.property('onBeforeRealse') | raw }}
+        },
+        onRelease: function(target) {
+          {{ __SELF__.property('onRelease') | raw }}
+        },
+        onBeforeClose: function(target) {
+          {{ __SELF__.property('onBeforeClose') | raw }}
+        },
+        onClose: function(target) {
+          {{ __SELF__.property('onClose') | raw }}
+        }
+      });
+    });
+  </script>
 
 {% endput %}
